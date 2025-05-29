@@ -139,15 +139,15 @@ export const products: Product[] = [
   },
   {
     id: "8",
-    name: "Saia Midi Plissada",
+    name: "Saia Midi Plissada Elegante",
     price: 99.90,
-    description: "Saia midi plissada em tecido fluido. Elegante e versátil para diversas ocasiões.",
+    description: "Saia midi plissada em tecido fluido e elegante. Cintura alta com pregas delicadas que criam movimento. Perfeita para looks femininos e sofisticados.",
     category: "saias",
     sizes: ["P", "M", "G", "GG"],
     colors: ["Preto", "Nude", "Azul Marinho"],
     images: [
-      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=600&fit=crop"
     ],
     inStock: true,
     featured: true,
