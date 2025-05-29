@@ -146,8 +146,8 @@ export const products: Product[] = [
     sizes: ["P", "M", "G", "GG"],
     colors: ["Preto", "Nude", "Azul Marinho"],
     images: [
-      "https://images.unsplash.com/photo-1583496661160-fb5886a13d57?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=500&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop"
     ],
     inStock: true,
     featured: true,
