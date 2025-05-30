@@ -39,7 +39,7 @@ export const products: Product[] = [
     price: 129.90,
     description: "Calça jeans skinny de alta qualidade com lavagem escura. Modelagem moderna e confortável.",
     category: "calcas",
-    sizes: ["38", "40", "42", "44", "46"],
+    sizes: ["38", "40", "42", "44"],
     colors: ["Azul Escuro", "Azul Claro"],
     images: [
       "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=600&fit=crop",
@@ -70,7 +70,7 @@ export const products: Product[] = [
   },
   {
     id: "4",
-    name: "Blusa Social Feminina",
+    name: "Blusa Social",
     price: 89.90,
     description: "Blusa social elegante, ideal para ambiente corporativo. Tecido de alta qualidade e corte moderno.",
     category: "blusas",
@@ -146,7 +146,7 @@ export const products: Product[] = [
     sizes: ["P", "M", "G", "GG"],
     colors: ["Preto", "Nude", "Azul Marinho"],
     images: [
-      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop",
+      "https://images.pexels.com/photos/25634195/pexels-photo-25634195.jpeg?w=500&h=600&fit=crop",
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=600&fit=crop"
     ],
     inStock: true,

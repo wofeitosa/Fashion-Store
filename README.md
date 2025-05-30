@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# 🛍️ Fashion Store - Moda que Inspira
 
-## Project info
+Um ecommerce moderno e responsiva para uma loja de moda online. O projeto foi desenvolvido com foco em performance, acessibilidade e design sofisticado, utilizando tecnologias de ponta como Vite, React, Tailwind CSS, Shadcn UI e TypeScript.
 
-**URL**: https://lovable.dev/projects/79d44808-1325-4272-9c74-c500576045eb
+---
 
-## How can I edit this code?
+## 🚀 Tecnologias utilizadas
 
-There are several ways of editing your application.
+- **Vite** – Ferramenta de build rápida e moderna para projetos web  
+- **React** – Biblioteca para construção de interfaces reativas  
+- **TypeScript** – Superset do JavaScript com tipagem estática  
+- **Tailwind CSS** – Framework de CSS utilitário para estilização ágil  
+- **shadcn-ui** – Componentes de UI acessíveis, modernos e personalizáveis  
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/79d44808-1325-4272-9c74-c500576045eb) and start prompting.
+## 🛠 Como executar localmente
 
-Changes made via Lovable will be committed automatically to this repo.
+### Pré-requisitos
 
-**Use your preferred IDE**
+- [Node.js](https://nodejs.org/) instalado  
+- [Yarn](https://yarnpkg.com/) instalado globalmente  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Passo a passo
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# 1. Clone o repositório
+git clone https://github.com/wofeitosa/fashion-store.git
 
-Follow these steps:
+# 2. Acesse a pasta do projeto
+cd fashion-store
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 3. Instale as dependências
+yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 4. Inicie o servidor de desenvolvimento
+yarn dev
 
-# Step 3: Install the necessary dependencies.
-npm i
+# O projeto estará disponível em: http://localhost:5173
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/79d44808-1325-4272-9c74-c500576045eb) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
