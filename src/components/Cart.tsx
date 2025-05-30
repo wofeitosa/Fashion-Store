@@ -6,16 +6,18 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ShoppingBag, Plus, Minus, Trash2, CreditCard } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const { items, removeItem, updateQuantity, getTotalPrice, clearCart } = useCart();
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
-    toast({
-      title: "Direcionando para pagamento",
-      description: "Você será redirecionado para finalizar sua compra.",
-    });
-    // Aqui seria implementada a integração com gateway de pagamento
+    navigate('/pagamento');
+  };
+
+  const handleContinueShopping = () => {
+    navigate('/');
   };
 
   if (items.length === 0) {
@@ -34,6 +36,7 @@ const Cart = () => {
               <Button 
                 size="lg"
                 className="bg-fashion-900 hover:bg-fashion-800 text-white px-8"
+                onClick={handleContinueShopping}
               >
                 Continuar Comprando
               </Button>
@@ -192,6 +195,7 @@ const Cart = () => {
                   variant="outline"
                   size="lg"
                   className="w-full border-fashion-300 text-fashion-700 hover:bg-fashion-50"
+                  onClick={handleContinueShopping}
                 >
                   Continuar Comprando
                 </Button>
