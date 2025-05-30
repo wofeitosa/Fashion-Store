@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-fashion-900 text-white">
+    <footer id="contact" className="bg-fashion-900 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-fashion-800">
         <div className="container mx-auto px-4 py-12">

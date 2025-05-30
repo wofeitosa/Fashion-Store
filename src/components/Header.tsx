@@ -18,12 +18,20 @@ const Header = () => {
     navigate('/carrinho');
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const footer = document.getElementById('contact');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navigationItems = [
     { name: 'Início', href: '#home' },
     { name: 'Produtos', href: '#products' },
     { name: 'Categorias', href: '#categories' },
     { name: 'Sobre', href: '#about' },
-    { name: 'Contato', href: '#contact' }
+    { name: 'Contato', href: '#contact', onClick: handleContactClick }
   ];
 
   return (
@@ -41,6 +49,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={item.onClick}
                 className="text-fashion-600 hover:text-fashion-900 transition-colors duration-200 font-medium"
               >
                 {item.name}
@@ -111,8 +120,13 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => {
+                    if (item.onClick) {
+                      item.onClick(e);
+                    }
+                    setIsMenuOpen(false);
+                  }}
                   className="text-fashion-600 hover:text-fashion-900 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>

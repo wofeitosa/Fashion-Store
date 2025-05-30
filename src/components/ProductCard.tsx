@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Product } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Heart, ShoppingCart, Star } from 'lucide-react';
+import { Heart, ShoppingCart, Star, Check } from 'lucide-react';
 import { useCart } from '@/hooks/useCart';
 import { toast } from '@/hooks/use-toast';
 
@@ -15,6 +15,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [isAdded, setIsAdded] = useState(false);
   const { addItem } = useCart();
 
   const handleAddToCart = (e: React.MouseEvent) => {
@@ -27,6 +28,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => 
       size: selectedSize,
       color: product.colors[0]
     });
+    
+    // Mostrar feedback visual
+    setIsAdded(true);
+    setTimeout(() => setIsAdded(false), 2000);
     
     toast({
       title: "Produto adicionado!",
@@ -96,12 +101,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => 
           </Button>
           <Button
             size="sm"
-            className="bg-fashion-900 hover:bg-fashion-800 text-white px-4"
+            className={`px-4 transition-all duration-300 ${
+              isAdded 
+                ? 'bg-green-600 hover:bg-green-700 text-white' 
+                : 'bg-fashion-900 hover:bg-fashion-800 text-white'
+            }`}
             onClick={handleAddToCart}
           >
-            <ShoppingCart className="h-4 w-4" />
+            {isAdded ? <Check className="h-4 w-4" /> : <ShoppingCart className="h-4 w-4" />}
           </Button>
         </div>
+
+        {/* Added to Cart Alert */}
+        {isAdded && (
+          <div className="absolute inset-0 bg-green-500/20 backdrop-blur-sm flex items-center justify-center">
+            <div className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 animate-in fade-in zoom-in duration-300">
+              <Check className="h-4 w-4" />
+              <span className="text-sm font-medium">Adicionado!</span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Content */}
