@@ -4,13 +4,19 @@ import { ShoppingCart, Search, User, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useCart } from '@/hooks/useCart';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { items } = useCart();
+  const navigate = useNavigate();
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleCartClick = () => {
+    navigate('/carrinho');
+  };
 
   const navigationItems = [
     { name: 'Início', href: '#home' },
@@ -62,7 +68,7 @@ const Header = () => {
               <User className="h-5 w-5 text-fashion-600" />
             </Button>
             
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative" onClick={handleCartClick}>
               <ShoppingCart className="h-5 w-5 text-fashion-600" />
               {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-fashion-900 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
